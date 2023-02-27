@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 
-public class Main {
+public class Guess {
     public static void main(String[] args) throws IOException {
         // Define the possible characters for the password
         char[] chars = "abcdefghijklmnopqrstuvwxyz".toCharArray();
