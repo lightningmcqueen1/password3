@@ -14,19 +14,19 @@ public class Guess {
         // Get input and output streams for child process
         BufferedReader in;
         OutputStream out;
-
+        
         // Try all possible combinations of two characters
-           String sesh = in.readLine();
-		  
+           String sesh;
 		   for(char c1 : chars)
 		   {
             for (char c2 : chars) {
                 // Generate next guess
-				Process child = Runtime.getRuntime().exec("./script");
+				child = Runtime.getRuntime().exec("./script");
 
         // Get input and output streams for child process
-                BufferedReader in = new BufferedReader(new InputStreamReader(child.getInputStream()));
-                OutputStream out = child.getOutputStream();
+                in = new BufferedReader(new InputStreamReader(child.getInputStream()));
+                out = child.getOutputStream();
+				sesh = in.readLine();
                 String guess = "" + c1 + c2;
                 System.out.println("Guessing " + guess);
 
@@ -42,6 +42,7 @@ public class Guess {
                     System.out.println("The password is " + guess);
                     return;
                 }
+				
             }
 		   }
 		
