@@ -2,7 +2,7 @@ import java.io.*;
 
 public class RunExecutable {
     public static void main(String[] args) {
-        String absolutePath = new File("").getAbsolutePath()+ "\\script";
+        String absolutePath = new File("").getAbsolutePath()+ "//script";
         try {
             Process process = Runtime.getRuntime().exec(absolutePath);
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
